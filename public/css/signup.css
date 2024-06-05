@@ -1,0 +1,186 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(8, 9, 8);
+  /* background-color: rgb(0, 0, 0); */
+}
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+  font-family: "Hanken Grotesk", sans-serif;
+  }
+  
+  .bg{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 60%;
+    filter: blur(3px);
+    width: 100%;
+  }
+  
+  .navbar {
+    background-color: rgba(50, 50, 50, 0.337);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius:50px;
+    border: 0.3px solid rgba(255, 255, 255, 0.11);
+    position: fixed;
+    top: 30px;
+    width: 25%;
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .navbar-center{
+    flex: 1;
+    text-align: center;
+  }
+  
+  .navbar .signup-btn{
+    color: #f0e9e9;
+  }
+
+  .navbar a {
+    color:#686964;
+    text-decoration: none;
+    padding: 8px 20px;
+    font-family:"Hanken Grotesk", sans-serif;
+    font-weight: 400;
+    border-radius: 20px; /* Rounded corners */
+    transition: color 0.8s; /* Add transition effect to color property */
+  }
+  
+  .navbar a:hover {
+    color: #f0e9e9 ; /* Hover color */
+  }
+  
+  .content {
+    margin-top: 60px; /* Adjust according to navbar height */
+    padding: 20px;
+  }
+
+
+
+
+  .wrapper{
+    width: 420px;
+    background-color: rgba(50, 50, 50, 0.337);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(30px);
+    color: #fff;
+    border-radius: 12px;
+    padding: 30px 40px;
+    position: relative;
+    right: 20px;
+    top: 40px;
+  }
+  .wrapper h1{
+    font-size: 25px;
+    text-align: center;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+  }
+  .wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+  }
+  .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 30px;
+    font-size: 15px;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+  }
+  .input-box input::placeholder{
+    color: #ffffff7b;
+  }
+  .input-box i{
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+  
+  }
+
+  .wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background:#f4f732;
+
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.5s;
+    transition: box-shadow 0.5s;
+  }
+  .wrapper .btn:hover{
+    background:#e8fd01 ;
+    box-shadow: 0 0 20px rgba(201, 203, 73, 0.664);
+    
+  }
+  .wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+  }
+  .register-link p{
+    color:#e1e1e1;
+    text-decoration: none;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+  }
+  .register-link p a{
+    color: #f0f0f0;
+    text-decoration: none;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    transition: color 0.5s ;
+  }
+  .register-link p a:hover{
+    color: #f4f732;
+    text-decoration: underline;
+  }

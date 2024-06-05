@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+    <title>Anomaly Detector Using ML</title>
+</head>
+<body>
+  <img class="bg" src="/css/tareq-ajalyakin-72aEtYlS5K0-unsplash.jpg">
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-center">
+          <a href="/" class="home-btn">Home</a>
+          <a href="/login" class="login-btn">Login</a>
+          <a href="/signup" class="signup-btn">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="content">
+      <!-- Your content here -->
+    </div>
+    
+    <div class="header">
+      <h1>Anomaly  <span>Detection</span></h1>
+      <h2>Using Machine Learning Algorithms</h2>
+      <form class="subscribe-form">
+          <input type="email" placeholder="Enter your email">
+          <button type="submit">Subscribe </button>
+      </form>
+    </div>
+  
+   
+      <form action="/uploadvideo" method="post" enctype="multipart/form-data">
+       <div class="upload">
+      <label for="input-file" id="drop-area">
+        <input type="file" accept="video/*" id="input-file" name="video" hidden>
+        <div id="vid-view">
+          <img src="/css/508-icon.png" alt="upload">
+          <p>Drag and Drop or Browse File<br>to Upload Video</p>
+          <span>Upload any video file from device</span>
+      </label>
+       </div>
+      <button id="analyze-button" type="submit" style="display: none;">Analyze</button>
+    </form>
+
+    {{!-- <script src="script.js"></script> --}}
+    
+<script>
+document.getElementById('input-file').addEventListener('change', function(event) {
+
+var videoView = document.getElementById('vid-view');
+
+var analyzeButton = document.getElementById('analyze-button');
+
+var file = event.target.files[0];
+
+
+// Check if the file is a video
+
+if(file && file.type.includes('video')) {
+
+var reader = new FileReader();
+
+reader.onload = function(event) {
+
+// Create a video element
+
+var video = document.createElement('video');
+
+video.src = event.target.result;
+
+video.controls = true;
+
+video.style.maxWidth = '100%';
+
+video.style.maxHeight = '100%';
+
+video.style.objectFit = 'contain'; // Ensure video fits within the frame
+
+// Clear the previous content and append the video
+
+videoView.innerHTML = '';
+
+videoView.appendChild(video);
+
+// Show the analyze button
+
+analyzeButton.style.display = 'block';
+
+};
+
+reader.readAsDataURL(file);
+
+} else {
+
+videoView.innerHTML = '<img src="508-icon.png" alt="upload"><p style="color: ;">Drag and Drop or Browse File<br>to Upload Video</p><span style="color: red;">Please upload a valid video file.</span>';
+
+// Hide the analyze button
+
+analyzeButton.style.display = 'none';
+
+}
+});
+</script>
+
+
+</body>
+</html>
